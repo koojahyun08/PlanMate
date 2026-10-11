@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="47dp"
+    android:orientation="horizontal"
+    android:background="#E687C5FB"
+    android:gravity="center_vertical">
+
+    <!-- AI 채팅 -->
+    <LinearLayout
+        android:id="@+id/nav_ai"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true">
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_nav_chat"
+            android:scaleType="fitCenter"/>
+    </LinearLayout>
+
+    <!-- 학습 일정 -->
+    <LinearLayout
+        android:id="@+id/nav_schedule"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true">
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_nav_schedule"
+            android:scaleType="fitCenter"/>
+    </LinearLayout>
+
+    <!-- 학습 타이머 -->
+    <LinearLayout
+        android:id="@+id/nav_timer"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true">
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="14dp"
+            android:src="@drawable/ic_nav_timer"
+            android:scaleType="fitCenter"/>
+    </LinearLayout>
+
+    <!-- 할 일 목록 -->
+    <LinearLayout
+        android:id="@+id/nav_todo"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true">
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="19dp"
+            android:src="@drawable/ic_nav_todo"
+            android:scaleType="fitCenter"/>
+    </LinearLayout>
+
+    <!-- 학습 분석 -->
+    <LinearLayout
+        android:id="@+id/nav_analysis"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true">
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_nav_analysis"
+            android:scaleType="fitCenter"/>
+    </LinearLayout>
+
+    <!-- 메모장 -->
+    <LinearLayout
+        android:id="@+id/nav_memo"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true">
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_nav_memo"
+            android:scaleType="fitCenter"/>
+    </LinearLayout>
+
+</LinearLayout>

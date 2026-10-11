@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="40dp"
+            android:paddingBottom="10dp"
+            android:paddingHorizontal="16dp"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="4dp">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_back"
+                    android:scaleType="fitCenter"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:id="@+id/hamburgerMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <View android:layout_width="24dp" android:layout_height="2dp" android:background="#000000" android:layout_marginBottom="4dp"/>
+                <View android:layout_width="24dp" android:layout_height="2dp" android:background="#000000" android:layout_marginBottom="4dp"/>
+                <View android:layout_width="24dp" android:layout_height="2dp" android:background="#000000"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- 커스텀 달력 -->
+                <com.example.ch2_project.CustomCalendarView
+                    android:id="@+id/customCalendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- 한 줄 일기 카드 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/diary_background"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="한 줄 일기"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:layout_marginEnd="8dp"/>
+                        <TextView
+                            android:id="@+id/diaryDateText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2026.04.15"
+                            android:textSize="14sp"
+                            android:textColor="#000000"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/diaryContentText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="일기를 작성해주세요."
+                        android:textSize="14sp"
+                        android:textColor="#333333"
+                        android:paddingVertical="10dp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/moodContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:layout_marginBottom="10dp">
+                        <TextView android:id="@+id/mood1" android:layout_width="45dp" android:layout_height="45dp" android:text="😊" android:textSize="28sp" android:gravity="center" android:layout_marginEnd="5dp"/>
+                        <TextView android:id="@+id/mood2" android:layout_width="45dp" android:layout_height="45dp" android:text="😐" android:textSize="28sp" android:gravity="center" android:layout_marginEnd="5dp"/>
+                        <TextView android:id="@+id/mood3" android:layout_width="45dp" android:layout_height="45dp" android:text="😢" android:textSize="28sp" android:gravity="center" android:layout_marginEnd="5dp"/>
+                        <TextView android:id="@+id/mood4" android:layout_width="45dp" android:layout_height="45dp" android:text="😡" android:textSize="28sp" android:gravity="center" android:layout_marginEnd="5dp"/>
+                        <TextView android:id="@+id/mood5" android:layout_width="45dp" android:layout_height="45dp" android:text="😴" android:textSize="28sp" android:gravity="center"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/selectedMood"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="😐 보통 하루"
+                        android:textSize="12sp"
+                        android:textColor="#888888"
+                        android:layout_gravity="end"
+                        android:padding="8dp"/>
+                </LinearLayout>
+
+                <!-- 오늘 일정 카드 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/diary_background"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:layout_marginBottom="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="오늘 일정"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:layout_marginEnd="8dp"/>
+
+                        <TextView
+                            android:id="@+id/scheduleDate"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="2026.04.15"
+                            android:textSize="14sp"
+                            android:textColor="#000000"/>
+
+                        <TextView
+                            android:id="@+id/scheduleEditButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="수정"
+                            android:textSize="12sp"
+                            android:textColor="#888888"
+                            android:padding="4dp"
+                            android:clickable="true"
+                            android:focusable="true"/>
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/studyTaskRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- 하단 바 -->
+        <include layout="@layout/bottom_navigation_bar"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        app:menu="@menu/drawer_menu"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

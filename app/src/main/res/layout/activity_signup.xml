@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/login_background"
+    android:padding="17dp"
+    android:gravity="center_horizontal">
+
+    <!-- 회원가입 타이틀 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginTop="180dp"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="start"/>
+
+    <!-- 구글로 회원가입 -->
+    <LinearLayout
+        android:id="@+id/googleSignupButton"
+        android:layout_width="300dp"
+        android:layout_height="38dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/signup_button_background"
+        android:layout_marginBottom="25dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/google_logo"
+            android:scaleType="fitCenter"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="구글로 회원가입"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginEnd="20dp"/>
+    </LinearLayout>
+
+    <!-- 카카오로 회원가입 -->
+    <LinearLayout
+        android:id="@+id/kakaoSignupButton"
+        android:layout_width="300dp"
+        android:layout_height="38dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/signup_button_background"
+        android:layout_marginBottom="25dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/kakao_logo"
+            android:scaleType="fitCenter"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="카카오로 회원가입"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginEnd="20dp"/>
+    </LinearLayout>
+
+    <!-- 네이버로 회원가입 -->
+    <LinearLayout
+        android:id="@+id/naverSignupButton"
+        android:layout_width="300dp"
+        android:layout_height="38dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/signup_button_background"
+        android:layout_marginBottom="25dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/naver_logo"
+            android:scaleType="fitCenter"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="네이버로 회원가입"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginEnd="20dp"/>
+    </LinearLayout>
+
+    <!-- 이메일로 회원가입 -->
+    <LinearLayout
+        android:id="@+id/emailSignupButton"
+        android:layout_width="300dp"
+        android:layout_height="38dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/signup_button_background"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_profile"
+            android:scaleType="fitCenter"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="이메일로 회원가입"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginEnd="20dp"/>
+    </LinearLayout>
+
+</LinearLayout>

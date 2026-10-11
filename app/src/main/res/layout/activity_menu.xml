@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <!-- 왼쪽 사이드바 -->
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#F5F5F5"
+        android:padding="16dp"
+        android:paddingTop="80dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#CCCCCC" />
+
+        <TextView
+            android:id="@+id/todayStudyMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📅 오늘의 학습"
+            android:textSize="16sp"
+            android:padding="12dp"/>
+
+        <TextView
+            android:id="@+id/studyAnalysisMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📊 학습 분석"
+            android:textSize="16sp"
+            android:padding="12dp"/>
+
+        <TextView
+            android:id="@+id/timerMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⏱️ 타이머"
+            android:textSize="16sp"
+            android:padding="12dp"/>
+
+        <TextView
+            android:id="@+id/aiRecommendationMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🧠 AI 추천"
+            android:textSize="16sp"
+            android:padding="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="📝 학습 기록"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="🔔 알림 설정"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="⚙️ 설정"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="❓ 도움말 / FAQ"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <!-- 오른쪽 빈 공간 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#FFFFFF">
+
+    </LinearLayout>
+
+</LinearLayout>

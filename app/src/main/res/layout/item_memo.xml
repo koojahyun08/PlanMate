@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="16dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginStart="21dp"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:id="@+id/memoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="제목"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginEnd="7dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/memoDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2026.04.11"
+            android:textColor="#ADADAD"
+            android:textSize="10sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/diary_background"
+        android:orientation="vertical"
+        android:paddingVertical="11dp"
+        android:layout_marginHorizontal="21dp"
+        android:elevation="2dp">
+
+        <TextView
+            android:id="@+id/memoContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="내용이 들어갈 자리입니다."
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="24dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginEnd="14dp">
+
+                <TextView
+                    android:id="@+id/editButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="수정"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="4dp"/>
+
+                <TextView
+                    android:id="@+id/deleteButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="삭제"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="4dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
